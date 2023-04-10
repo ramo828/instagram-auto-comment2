@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>542</width>
+    <height>553</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 254, 242);
+selection-color: rgb(85, 170, 255);
+selection-background-color: rgb(241, 240, 231);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="page_g">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>501</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Sayfa</string>
+    </property>
+    <widget class="QLineEdit" name="ipage">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(239, 241, 255)</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Sayfa ismi</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="d_time">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>29</y>
+       <width>51</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(239, 241, 255)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>39</y>
+       <width>151</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Denetleme süresi: </string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="comment_box">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>501</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Yorum</string>
+    </property>
+    <widget class="QPlainTextEdit" name="comment">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>301</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTipDuration">
+      <number>1</number>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(239, 241, 255)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="c_load">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>40</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Yorumu yükle</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="c_save">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>90</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Yorumu kaydet</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="aspam_box">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>501</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Anti Spam</string>
+    </property>
+    <widget class="QListView" name="listView">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>361</width>
+       <height>71</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>57</y>
+       <width>111</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Karakter sayısı: </string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="char_num">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>45</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(239, 241, 255)</string>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="spamOptions">
+     <property name="geometry">
+      <rect>
+       <x>341</x>
+       <y>45</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <stylestrategy>PreferDefault</stylestrategy>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">selection-color: rgb(201, 202, 255)</string>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>Karakter</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Numerik</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Sembol</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QListView" name="listView_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>101</width>
+       <height>71</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="spamController">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Anti Spam</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="terminal_box">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>501</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Terminal</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <widget class="QPlainTextEdit" name="terminal">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>301</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTipDuration">
+      <number>1</number>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(239, 241, 255)</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="button_box">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>30</y>
+       <width>151</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Kontrol</string>
+     </property>
+     <widget class="QPushButton" name="start">
+      <property name="geometry">
+       <rect>
+        <x>19</x>
+        <y>30</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Başlat</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="quit">
+      <property name="geometry">
+       <rect>
+        <x>19</x>
+        <y>74</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Çıkış</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>542</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menucontrol">
+    <property name="title">
+     <string>Controls</string>
+    </property>
+    <addaction name="settings"/>
+    <addaction name="about"/>
+    <addaction name="exit"/>
+   </widget>
+   <addaction name="menucontrol"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="settings">
+   <property name="text">
+    <string>Ayarlar</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="text">
+    <string>Hakkında</string>
+   </property>
+  </action>
+  <action name="exit">
+   <property name="text">
+    <string>Çıkış</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
