@@ -16,6 +16,9 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         MainWindow.setFont(font)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("ui_file/../resource/logo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet("background-color: rgb(255, 254, 242);\n"
 "selection-color: rgb(85, 170, 255);\n"
 "selection-background-color: rgb(241, 240, 231);")

@@ -13,6 +13,9 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(400, 263)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("ui_file/../resource/logo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        Dialog.setWindowIcon(icon)
         Dialog.setStyleSheet("background-color: rgb(255, 254, 242);\n"
 "")
         self.p_box = QtWidgets.QGroupBox(parent=Dialog)

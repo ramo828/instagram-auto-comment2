@@ -18,6 +18,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../resource/logo.png</normaloff>../resource/logo.png</iconset>
+  </property>
   <property name="toolTip">
    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu uygulama ile instagramdaki her hangi bir sayfani dinleyip en son posta yorum yaza bilirsiniz&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
   </property>

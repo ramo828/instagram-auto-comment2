@@ -17,6 +17,9 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         font.setBold(True)
         MainWindow.setFont(font)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("ui_file/../resource/logo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet("border-radius: 5px;    \n"
 "background-color: rgb(255, 254, 242);\n"
 "")

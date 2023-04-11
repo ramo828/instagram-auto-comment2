@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../resource/logo.png</normaloff>../resource/logo.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 254, 242);
 </string>
