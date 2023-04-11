@@ -220,6 +220,11 @@
     </property>
     <item>
      <property name="text">
+      <string>Default</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
       <string>Siyah</string>
      </property>
     </item>
@@ -230,7 +235,7 @@
     </item>
     <item>
      <property name="text">
-      <string>Mavi</string>
+      <string>Sari</string>
      </property>
     </item>
     <item>
@@ -240,7 +245,7 @@
     </item>
     <item>
      <property name="text">
-      <string>Sari</string>
+      <string>Mor</string>
      </property>
     </item>
    </widget>

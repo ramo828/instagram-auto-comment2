@@ -3,7 +3,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtCore import QThread, QObject, pyqtSignal as Signal, pyqtSlot as Slot
 from PyQt6.QtGui import QTextCursor
 from ui.loginUi import Ui_MainWindow
-from ui.mainWindow import Ui_MainWindow as mainWindow
+from ui.mainWindow import Ui_home as mainWindow
 from ui.settings import Ui_Dialog as uis
 from controls.app_controls import Setting_controls as sc
 from controls.database import Database
@@ -15,12 +15,21 @@ class Pencere(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.default_login = ''
         self.default_pass = ''
+        self.style1 = [
+            "themes/default.qss",
+            "themes/black.qss",
+            "themes/light_blue.qss",
+            "themes/yellow.qss",
+            "themes/red.qss",
+            "themes/purple.qss"]
         self.set = sc()
         self.db = Database()
         self.setupUi(self)
         self.logIn.clicked.connect(self.control)
         self.password.returnPressed.connect(self.control)
         self.passShow.clicked.connect(self.passEcho)
+        theme = self.loadTheme()
+        self.setStyleSheet(theme)
 
 
     def passEcho(self):
@@ -41,7 +50,8 @@ class Pencere(QMainWindow, Ui_MainWindow):
 
     def mainUI(self):
         self.yeniPencere = mainWindow()
-        self.yeniPencere.setupUi(self)
+        theme = self.loadTheme()
+        self.yeniPencere.setupUi(self, theme)
         self.yeniPencere.settings.triggered.connect(self.settUI)
         self.yeniPencere.exit.triggered.connect(self.quit)
         self.yeniPencere.about.triggered.connect(self.about)
@@ -64,18 +74,34 @@ class Pencere(QMainWindow, Ui_MainWindow):
 
     def settUI(self):
         dialog = QDialog(self)
+        theme = self.loadTheme()
         self.settingUI = uis()
-        self.settingUI.setupUi(dialog)
-
+        self.settingUI.setupUi(dialog, theme)
         self.settingUI.pshow.clicked.connect(self.showPassword)
         self.settingUI.pshow1.clicked.connect(self.showPassword)
         self.settingUI.pass_try.textChanged.connect(self.controlPassword)
         self.settingUI.save_quit.clicked.connect(self.save_and_quit)
+        self.settingUI.theme.currentIndexChanged.connect(self.getTheme)
         self.settingUI.user.setText(self.db.load_data(0))
         self.settingUI.iuser.setText(self.db.load_data(2))
         self.settingUI.ipass.setText(self.db.load_data(3))
         dialog.exec()
 
+    def loadTheme(self):
+        theme = ''
+        index = self.db.load_data(5)
+        with open(self.style1[index]) as qss:
+            theme = qss.read()
+        return theme
+
+    def getTheme(self):
+        index = self.settingUI.theme.currentIndex()
+        with open(self.style1[index]) as qss:
+            self.setStyleSheet(qss.read())
+            print(qss.read())
+            print(self.style1[index])
+        
+           
     def spamControl(self):
         spamStatus = self.yeniPencere.spamController.isChecked()
         if(spamStatus):
@@ -89,10 +115,12 @@ class Pencere(QMainWindow, Ui_MainWindow):
     def about(self):
         h = 300
         w = 120
+        theme = self.loadTheme()
         dialog = QDialog(self)
         dialog.setWindowTitle("Hakkında")
         dialog.setModal(True)
         dialog.resize(h, w)
+        dialog.setStyleSheet(theme)
         # Label oluşturun
         label = QLabel("""
         Bu program özel olarak RamoSoft'a yapılmışdır ve tüm hakları saklıdır.
@@ -154,6 +182,8 @@ class Pencere(QMainWindow, Ui_MainWindow):
         # sifre tekrari eynidirse serti yerine yetir
                 password = ps1
                 ips1 = self.settingUI.ipass.text()
+                index = self.settingUI.theme.currentIndex()
+                self.db.save_data_index(5,index)
                 luser = self.settingUI.iuser.text()
                 user = self.settingUI.user.text()
                 self.set.checkSettingData(

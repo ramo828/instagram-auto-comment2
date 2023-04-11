@@ -1,0 +1,24 @@
+QMainWindow {
+    background-color: rgb(64, 64, 64);
+    border-radius: 3px;	
+}
+QListView {
+    background-color: rgb(192, 192, 192);
+    border-radius: 10px;	
+}
+QComboBox {
+    background-color: rgb(128, 128, 128);
+        border-radius: 5px;	
+}
+QGroupBox {
+    background-color: rgb(128, 128, 128);
+        border-radius: 3px;	
+}
+QPushButton {
+    background-color: rgb(224, 224, 224);
+        border-radius: 5px;	
+            }
+QPlainTextEdit {
+    background-color: rgb(224, 224, 224);
+        border-radius: 8px;	
+        }

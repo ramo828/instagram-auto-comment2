@@ -1,0 +1,18 @@
+QMainWindow {
+    background-color: rgb(255, 255, 103);
+}
+QListView {
+    background-color: rgb(255, 255, 0);
+}
+QComboBox {
+    background-color: rgb(204, 204, 0);
+}
+QGroupBox {
+    background-color: rgb(255, 255, 204);
+}
+QPushButton {
+    background-color: rgb(255, 204, 153);
+            }
+QPlainTextEdit {
+    background-color: rgb(255, 255, 255);
+        }

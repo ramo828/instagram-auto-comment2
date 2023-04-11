@@ -10,14 +10,13 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 
 class Ui_Dialog(object):
-    def setupUi(self, Dialog):
+    def setupUi(self, Dialog, theme):
         Dialog.setObjectName("Dialog")
         Dialog.resize(400, 263)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("ui_file/../resource/logo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         Dialog.setWindowIcon(icon)
-        Dialog.setStyleSheet("background-color: rgb(255, 254, 242);\n"
-"")
+        Dialog.setStyleSheet(theme)
         self.p_box = QtWidgets.QGroupBox(parent=Dialog)
         self.p_box.setGeometry(QtCore.QRect(20, 84, 171, 161))
         self.p_box.setObjectName("p_box")
@@ -73,6 +72,7 @@ class Ui_Dialog(object):
         self.theme.addItem("")
         self.theme.addItem("")
         self.theme.addItem("")
+        self.theme.addItem("")
         self.save_quit = QtWidgets.QPushButton(parent=Dialog)
         self.save_quit.setGeometry(QtCore.QRect(200, 220, 181, 25))
         self.save_quit.setObjectName("save_quit")
@@ -95,9 +95,10 @@ class Ui_Dialog(object):
         self.ipass.setPlaceholderText(_translate("Dialog", "Şifre"))
         self.pshow1.setText(_translate("Dialog", "Şifreyi göster"))
         self.t_box.setTitle(_translate("Dialog", "Temalar"))
-        self.theme.setItemText(0, _translate("Dialog", "Siyah"))
-        self.theme.setItemText(1, _translate("Dialog", "Acik mavi"))
-        self.theme.setItemText(2, _translate("Dialog", "Mavi"))
-        self.theme.setItemText(3, _translate("Dialog", "Kirmizi"))
-        self.theme.setItemText(4, _translate("Dialog", "Sari"))
+        self.theme.setItemText(0, _translate("Dialog", "Default"))
+        self.theme.setItemText(1, _translate("Dialog", "Siyah"))
+        self.theme.setItemText(2, _translate("Dialog", "Acik mavi"))
+        self.theme.setItemText(3, _translate("Dialog", "Sari"))
+        self.theme.setItemText(4, _translate("Dialog", "Kirmizi"))
+        self.theme.setItemText(5, _translate("Dialog", "Mor"))
         self.save_quit.setText(_translate("Dialog", "Kaydet ve çık"))

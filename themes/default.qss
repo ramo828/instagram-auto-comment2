@@ -1,0 +1,15 @@
+QMainWindow {
+    background-color: rgb(255, 254, 242);
+    selection-color: rgb(85, 170, 255);
+    selection-background-color: rgb(241, 240, 231);
+    }
+
+QLineEdit {
+    background-color: rgb(192, 192, 192);
+}
+QPlainTextEdit {
+    background-color: rgb(239, 241, 255);
+    }
+QSpinBox {
+    background-color: rgb(160, 160, 160);
+}
