@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 254, 242);
+</string>
+  </property>
   <widget class="QGroupBox" name="p_box">
    <property name="geometry">
     <rect>

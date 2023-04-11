@@ -169,11 +169,16 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setToolTip(_translate("MainWindow", "<html><head/><body><p>Bu uygulama ile instagramdaki her hangi bir sayfani dinleyip en son posta yorum yaza bilirsiniz</p></body></html>"))
         self.page_g.setTitle(_translate("MainWindow", "Sayfa"))
         self.ipage.setPlaceholderText(_translate("MainWindow", "Sayfa ismi"))
         self.label.setText(_translate("MainWindow", "Denetleme süresi: "))
         self.comment_box.setTitle(_translate("MainWindow", "Yorum"))
+        self.comment.setToolTip(_translate("MainWindow", "<html><head/><body><p>Alt satira gecerek farkli commentleri rastgele posta yazdira bilirsniz. </p><p>Ornek:</p><p>Bu bir ornekdir</p><p>bu bir commentdir</p><p>bu rastgele bir mesajdir</p><p><br/></p></body></html>"))
+        self.comment.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
+        self.c_load.setToolTip(_translate("MainWindow", "<html><head/><body><p>Kayıtlı yorumları geri yüklemek için tıklayın</p></body></html>"))
         self.c_load.setText(_translate("MainWindow", "Yorumu yükle"))
+        self.c_save.setToolTip(_translate("MainWindow", "<html><head/><body><p>Alt satıra geçerek farklı yorumlari rastgele posta yazdıra bilirsniz. </p><p>Ornek:</p><p>Bu bir ornekdir</p><p>bu bir commentdir</p><p>bu rastgele bir mesajdir</p><p><br/></p></body></html>"))
         self.c_save.setText(_translate("MainWindow", "Yorumu kaydet"))
         self.aspam_box.setTitle(_translate("MainWindow", "Anti Spam"))
         self.label_2.setText(_translate("MainWindow", "Karakter sayısı: "))

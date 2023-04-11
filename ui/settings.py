@@ -13,6 +13,8 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(400, 263)
+        Dialog.setStyleSheet("background-color: rgb(255, 254, 242);\n"
+"")
         self.p_box = QtWidgets.QGroupBox(parent=Dialog)
         self.p_box.setGeometry(QtCore.QRect(20, 84, 171, 161))
         self.p_box.setObjectName("p_box")

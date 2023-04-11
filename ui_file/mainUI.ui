@@ -18,6 +18,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="toolTip">
+   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu uygulama ile instagramdaki her hangi bir sayfani dinleyip en son posta yorum yaza bilirsiniz&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 254, 242);
 selection-color: rgb(85, 170, 255);
@@ -140,8 +143,14 @@ selection-background-color: rgb(241, 240, 231);</string>
        <bold>true</bold>
       </font>
      </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alt satira gecerek farkli commentleri rastgele posta yazdira bilirsniz. &lt;/p&gt;&lt;p&gt;Ornek:&lt;/p&gt;&lt;p&gt;Bu bir ornekdir&lt;/p&gt;&lt;p&gt;bu bir commentdir&lt;/p&gt;&lt;p&gt;bu rastgele bir mesajdir&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
      <property name="toolTipDuration">
       <number>1</number>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(239, 241, 255)</string>
@@ -156,6 +165,9 @@ selection-background-color: rgb(241, 240, 231);</string>
        <height>31</height>
       </rect>
      </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kayıtlı yorumları geri yüklemek için tıklayın&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
      <property name="text">
       <string>Yorumu yükle</string>
      </property>
@@ -168,6 +180,9 @@ selection-background-color: rgb(241, 240, 231);</string>
        <width>141</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alt satıra geçerek farklı yorumlari rastgele posta yazdıra bilirsniz. &lt;/p&gt;&lt;p&gt;Ornek:&lt;/p&gt;&lt;p&gt;Bu bir ornekdir&lt;/p&gt;&lt;p&gt;bu bir commentdir&lt;/p&gt;&lt;p&gt;bu rastgele bir mesajdir&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="text">
       <string>Yorumu kaydet</string>
