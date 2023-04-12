@@ -19,6 +19,10 @@ class Pencere(QMainWindow, Ui_MainWindow):
         self.default_pass = ''
         self.style1 = [
             "themes/default.qss",
+            "themes/besiktas.qss",
+            "themes/galatasaray.qss",
+            "themes/fenerbahce.qss",
+            "themes/trabzonspor.qss",
             "themes/black.qss",
             "themes/light_blue.qss",
             "themes/yellow.qss",
