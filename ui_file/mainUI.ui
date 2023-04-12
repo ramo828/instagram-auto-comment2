@@ -67,7 +67,7 @@ selection-background-color: rgb(241, 240, 231);</string>
       <enum>Qt::LeftToRight</enum>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(239, 241, 255)</string>
+      <string notr="true"/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -92,7 +92,7 @@ selection-background-color: rgb(241, 240, 231);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(239, 241, 255)</string>
+      <string notr="true"/>
      </property>
     </widget>
     <widget class="QLabel" name="label">
@@ -157,7 +157,7 @@ selection-background-color: rgb(241, 240, 231);</string>
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(239, 241, 255)</string>
+      <string notr="true"/>
      </property>
     </widget>
     <widget class="QPushButton" name="c_load">
@@ -249,7 +249,7 @@ selection-background-color: rgb(241, 240, 231);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(239, 241, 255)</string>
+      <string notr="true"/>
      </property>
      <property name="readOnly">
       <bool>false</bool>
@@ -370,7 +370,7 @@ selection-background-color: rgb(241, 240, 231);</string>
       <number>1</number>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(239, 241, 255)</string>
+      <string notr="true"/>
      </property>
     </widget>
     <widget class="QGroupBox" name="button_box">
@@ -453,7 +453,7 @@ selection-background-color: rgb(241, 240, 231);</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(239, 241, 255)</string>
+      <string notr="true"/>
      </property>
     </widget>
     <widget class="QSpinBox" name="comment_counter">
@@ -466,7 +466,7 @@ selection-background-color: rgb(241, 240, 231);</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(239, 241, 255)</string>
+      <string notr="true"/>
      </property>
     </widget>
     <widget class="QLabel" name="comment_count_label">

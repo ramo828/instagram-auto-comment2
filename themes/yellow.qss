@@ -14,5 +14,13 @@ QPushButton {
     background-color: rgb(255, 204, 153);
             }
 QPlainTextEdit {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 204);
+    border-radius: 8px;	
         }
+QSpinBox {
+    background-color: rgb(255, 255, 204);
+}
+
+QLineEdit {
+   background-color: rgb(255, 255, 204);
+}
