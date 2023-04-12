@@ -277,7 +277,7 @@ selection-background-color: rgb(241, 240, 231);</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">selection-color: rgb(201, 202, 255)</string>
+      <string notr="true"/>
      </property>
      <property name="editable">
       <bool>false</bool>

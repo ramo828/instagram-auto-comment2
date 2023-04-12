@@ -103,7 +103,7 @@ class Ui_home(object):
         self.spamOptions.setFont(font)
         self.spamOptions.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.spamOptions.setAutoFillBackground(False)
-        self.spamOptions.setStyleSheet("selection-color: rgb(201, 202, 255)")
+        self.spamOptions.setStyleSheet("")
         self.spamOptions.setEditable(False)
         self.spamOptions.setPlaceholderText("")
         self.spamOptions.setFrame(False)
