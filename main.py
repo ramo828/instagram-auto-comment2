@@ -7,6 +7,8 @@ from ui.mainWindow import Ui_home as mainWindow
 from ui.settings import Ui_Dialog as uis
 from controls.app_controls import Setting_controls as sc
 from controls.database import Database
+from controls.backend_control import Worker
+import threading as td
 import sys
 
 
@@ -30,6 +32,8 @@ class Pencere(QMainWindow, Ui_MainWindow):
         self.passShow.clicked.connect(self.passEcho)
         theme = self.loadTheme()
         self.setStyleSheet(theme)
+        self.work = Worker()
+        self.flag = True
 
 
     def passEcho(self):
@@ -62,8 +66,15 @@ class Pencere(QMainWindow, Ui_MainWindow):
         self.yeniPencere.start.clicked.connect(self.startApp)
         self.yeniPencere.char_num.setDisabled(True)
         self.yeniPencere.spamOptions.setDisabled(True)
+        self.work.log.connect(self.terminal_controller)
+        self.work.success_counter_signal.connect(self.yeniPencere.comment_counter.setValue)
+        self.work.try_counter_signal.connect(self.yeniPencere.try_count.setValue)
 
-        
+    def terminal_controller(self,data):
+        cursor1 = QTextCursor(self.yeniPencere.terminal.textCursor())
+        cursor1.movePosition(cursor1.MoveOperation.Down)
+        self.yeniPencere.terminal.setTextCursor(cursor1)
+        self.yeniPencere.terminal.insertPlainText(data)     
 
     def command_load(self):
         self.yeniPencere.comment.setPlainText(self.db.load_data(4))
@@ -207,7 +218,37 @@ class Pencere(QMainWindow, Ui_MainWindow):
         exit(1)
 
     def startApp(self):
-        print("start")
+        spControl = self.yeniPencere.spamController.isChecked()
+        page = self.yeniPencere.ipage.text()
+        san = int(self.yeniPencere.d_time.text())
+        comment = str(self.yeniPencere.comment.toPlainText())
+
+        if(not spControl):
+            char_num = 0
+        else:
+            char_num = int(self.yeniPencere.char_num.text())
+            # print(char_num)
+        print(char_num)
+        spam_options = self.yeniPencere.spamOptions.currentIndex()
+        self.work.setData(san, page,char_num, spam_options, comment)
+
+        if self.flag == True:
+            self.yeniPencere.start.setText("Durdur")
+            self.flag = False
+        else:
+            self.yeniPencere.start.setText("Başla")
+            self.flag = True
+        self.thread = td.Thread(target=self.work.runBot, daemon=True) # type: ignore
+
+        if(self.flag):
+            print("Durdu")
+            # self.thread.start()
+            self.work.stopBot(False)
+        else:
+            print("Calisdi")
+            self.yeniPencere.terminal.clear()
+            self.work.stopBot(True)
+            self.thread.start()
 
 app = QApplication(sys.argv)
 pencere = Pencere()

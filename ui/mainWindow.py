@@ -12,8 +12,8 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_home(object):
     def setupUi(self, home, theme):
         home.setObjectName("home")
-        home.resize(542, 553)
-        font = QtGui.QFont() # type: ignore
+        home.resize(542, 612)
+        font = QtGui.QFont()
         font.setPointSize(11)
         home.setFont(font)
         icon = QtGui.QIcon()
@@ -121,7 +121,7 @@ class Ui_home(object):
         self.spamController.setFont(font)
         self.spamController.setObjectName("spamController")
         self.terminal_box = QtWidgets.QGroupBox(parent=self.centralwidget)
-        self.terminal_box.setGeometry(QtCore.QRect(10, 350, 501, 151))
+        self.terminal_box.setGeometry(QtCore.QRect(10, 410, 501, 151))
         self.terminal_box.setFlat(False)
         self.terminal_box.setObjectName("terminal_box")
         self.terminal = QtWidgets.QPlainTextEdit(parent=self.terminal_box)
@@ -143,6 +143,29 @@ class Ui_home(object):
         self.quit = QtWidgets.QPushButton(parent=self.button_box)
         self.quit.setGeometry(QtCore.QRect(19, 74, 121, 31))
         self.quit.setObjectName("quit")
+        self.groupBox = QtWidgets.QGroupBox(parent=self.centralwidget)
+        self.groupBox.setGeometry(QtCore.QRect(10, 350, 501, 61))
+        self.groupBox.setObjectName("groupBox")
+        self.denme_label = QtWidgets.QLabel(parent=self.groupBox)
+        self.denme_label.setGeometry(QtCore.QRect(10, 30, 75, 20))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.denme_label.setFont(font)
+        self.denme_label.setObjectName("denme_label")
+        self.try_count = QtWidgets.QSpinBox(parent=self.groupBox)
+        self.try_count.setGeometry(QtCore.QRect(120, 27, 42, 28))
+        self.try_count.setStyleSheet("background-color: rgb(239, 241, 255)")
+        self.try_count.setObjectName("try_count")
+        self.comment_counter = QtWidgets.QSpinBox(parent=self.groupBox)
+        self.comment_counter.setGeometry(QtCore.QRect(440, 27, 42, 28))
+        self.comment_counter.setStyleSheet("background-color: rgb(239, 241, 255)")
+        self.comment_counter.setObjectName("comment_counter")
+        self.comment_count_label = QtWidgets.QLabel(parent=self.groupBox)
+        self.comment_count_label.setGeometry(QtCore.QRect(320, 34, 101, 17))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.comment_count_label.setFont(font)
+        self.comment_count_label.setObjectName("comment_count_label")
         home.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=home)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 542, 22))
@@ -166,7 +189,7 @@ class Ui_home(object):
 
         self.retranslateUi(home)
         QtCore.QMetaObject.connectSlotsByName(home)
-   
+
     def retranslateUi(self, home):
         _translate = QtCore.QCoreApplication.translate
         home.setWindowTitle(_translate("home", "MainWindow"))
@@ -191,6 +214,9 @@ class Ui_home(object):
         self.button_box.setTitle(_translate("home", "Kontrol"))
         self.start.setText(_translate("home", "Başlat"))
         self.quit.setText(_translate("home", "Çıkış"))
+        self.groupBox.setTitle(_translate("home", "Bilgiler"))
+        self.denme_label.setText(_translate("home", "Deneme: "))
+        self.comment_count_label.setText(_translate("home", "Atılan yorum:"))
         self.menucontrol.setTitle(_translate("home", "Controls"))
         self.settings.setText(_translate("home", "Ayarlar"))
         self.about.setText(_translate("home", "Hakkında"))

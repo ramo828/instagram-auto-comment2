@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>542</width>
-    <height>553</height>
+    <height>612</height>
    </rect>
   </property>
   <property name="font">
@@ -337,7 +337,7 @@ selection-background-color: rgb(241, 240, 231);</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>350</y>
+      <y>410</y>
       <width>501</width>
       <height>151</height>
      </rect>
@@ -411,6 +411,81 @@ selection-background-color: rgb(241, 240, 231);</string>
        <string>Çıkış</string>
       </property>
      </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>501</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Bilgiler</string>
+    </property>
+    <widget class="QLabel" name="denme_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>75</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Deneme: </string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="try_count">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>27</y>
+       <width>42</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(239, 241, 255)</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="comment_counter">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>27</y>
+       <width>42</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(239, 241, 255)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="comment_count_label">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>34</y>
+       <width>101</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Atılan yorum:</string>
+     </property>
     </widget>
    </widget>
   </widget>
