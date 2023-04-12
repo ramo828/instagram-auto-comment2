@@ -69,6 +69,9 @@ class Pencere(QMainWindow, Ui_MainWindow):
         self.work.log.connect(self.terminal_controller)
         self.work.success_counter_signal.connect(self.yeniPencere.comment_counter.setValue)
         self.work.try_counter_signal.connect(self.yeniPencere.try_count.setValue)
+        self.yeniPencere.try_count.setDisabled(True)
+        self.yeniPencere.comment_counter.setDisabled(True)
+
 
     def terminal_controller(self,data):
         cursor1 = QTextCursor(self.yeniPencere.terminal.textCursor())
@@ -203,7 +206,7 @@ class Pencere(QMainWindow, Ui_MainWindow):
                                         luser,
                                         ips1
                                         )
-                exit(1)
+                exit()
 
             else:
                 password = ''
@@ -215,7 +218,7 @@ class Pencere(QMainWindow, Ui_MainWindow):
 
         
     def quit(self):
-        sys.exit(1)
+        exit()
 
     def startApp(self):
         spControl = self.yeniPencere.spamController.isChecked()
