@@ -215,7 +215,7 @@ class Pencere(QMainWindow, Ui_MainWindow):
 
         
     def quit(self):
-        exit(1)
+        sys.exit(1)
 
     def startApp(self):
         spControl = self.yeniPencere.spamController.isChecked()
