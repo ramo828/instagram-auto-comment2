@@ -1,7 +1,7 @@
 from PyQt6.QtCore import QThread, QObject, pyqtSignal as Signal, pyqtSlot as Slot
 from PyQt6.QtGui import QTextCursor
 from instagrapi import Client
-from instagrapi.exceptions import UnknownError
+from instagrapi.exceptions import UnknownError, ClientNotFoundError
 import random as rd
 from random import randint
 import datetime
@@ -71,10 +71,12 @@ class autoComment:
     def setPage(self, page):
         self.page = page
 
-    def setComment(self, comment:str):
+    def setComment(self, comment:str, rcount:int, rchoise:int):
+        util = Utility(rchoise)
         comment_temp = comment.splitlines()
         length = len(comment_temp)-1
-        self.comment = comment_temp[randint(0,length)]+" "
+        self.comment = comment_temp[randint(0,length)]+" "+str(util.buildRand(rcount))
+
         # print(self.comment)
 
     def send(self, code):
@@ -115,7 +117,7 @@ class Worker(QObject):
         ksifre = d.load_data(index=3)
       
         util.choise = self.rchoise
-        self.yorum +=str(util.buildRand(self.rcount))
+        # self.yorum +=str(util.buildRand(self.rcount))
         auto = autoComment()
         if(self.flag!=True):
             self.log.emit("Durduruldu...")
@@ -130,15 +132,17 @@ class Worker(QObject):
             self.log.emit(f"\n{saat} >> Deneme sayısı: {count}")
             auto.setAccount(username=kadi, password=ksifre)
             auto.setPage(self.sayfa)
-            # print(self.yorum)
             try:
-                auto.setComment(comment=self.yorum)
+                auto.setComment(comment=self.yorum, rcount=self.rcount, rchoise=self.rchoise)
                 auto.connect()
             except UnknownError:
                 self.log.emit("\nLütfen instagram bilgilerini kontrol edip doğru girdiyinizden emin olun")
             if(self.flag != True):
                 break
-            auto.getMedia(0)
+            try:
+                auto.getMedia(0)
+            except (ClientNotFoundError, IndexError):
+                self.log.emit("\nSayfa bulunamadı")
             # Bura baxarsan
             if(count < 2):
                 unique = auto.tempCode

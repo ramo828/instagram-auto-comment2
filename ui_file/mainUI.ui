@@ -295,7 +295,7 @@ selection-background-color: rgb(241, 240, 231);</string>
      </item>
      <item>
       <property name="text">
-       <string>Numerik</string>
+       <string>Numara</string>
       </property>
      </item>
      <item>
@@ -350,7 +350,7 @@ selection-background-color: rgb(241, 240, 231);</string>
     </property>
     <widget class="QPlainTextEdit" name="terminal">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -371,6 +371,15 @@ selection-background-color: rgb(241, 240, 231);</string>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>false</bool>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QGroupBox" name="button_box">
