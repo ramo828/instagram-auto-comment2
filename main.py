@@ -66,6 +66,7 @@ class Pencere(QMainWindow, Ui_MainWindow):
         self.yeniPencere.c_load.clicked.connect(self.command_load)
         self.yeniPencere.c_save.clicked.connect(self.command_save)
         self.yeniPencere.spamController.clicked.connect(self.spamControl)
+        self.yeniPencere.comment_jump.clicked.connect(self.comment_jumping)
         self.yeniPencere.quit.clicked.connect(self.quit)
         self.yeniPencere.start.clicked.connect(self.startApp)
         self.yeniPencere.char_num.setDisabled(True)
@@ -76,6 +77,14 @@ class Pencere(QMainWindow, Ui_MainWindow):
         self.yeniPencere.try_count.setDisabled(True)
         self.yeniPencere.comment_counter.setDisabled(True)
 
+
+    def comment_jumping(self):
+        jumpStatus = self.yeniPencere.comment_jump.isChecked()
+        if(jumpStatus):
+            self.yeniPencere.c_jump.setEnabled(True)
+
+        else:
+            self.yeniPencere.c_jump.setDisabled(True)
 
     def terminal_controller(self,data):
         cursor1 = QTextCursor(self.yeniPencere.terminal.textCursor())
@@ -229,7 +238,10 @@ class Pencere(QMainWindow, Ui_MainWindow):
         page = self.yeniPencere.ipage.text()
         san = int(self.yeniPencere.d_time.text())
         comment = str(self.yeniPencere.comment.toPlainText())
-
+        if(self.yeniPencere.comment_jump.isChecked()):
+            commentNo = int(self.yeniPencere.c_jump.text())
+        else:
+            commentNo = 0
         if(not spControl):
             char_num = 0
         else:
@@ -237,7 +249,7 @@ class Pencere(QMainWindow, Ui_MainWindow):
             # print(char_num)
         print(char_num)
         spam_options = self.yeniPencere.spamOptions.currentIndex()
-        self.work.setData(san, page,char_num, spam_options, comment)
+        self.work.setData(san, page,char_num, spam_options, comment, commentNo)
 
         if self.flag == True:
             self.yeniPencere.start.setText("Durdur")

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>542</width>
-    <height>612</height>
+    <height>658</height>
    </rect>
   </property>
   <property name="font">
@@ -121,7 +121,7 @@ selection-background-color: rgb(241, 240, 231);</string>
       <x>10</x>
       <y>90</y>
       <width>501</width>
-      <height>131</height>
+      <height>171</height>
      </rect>
     </property>
     <property name="font">
@@ -136,7 +136,7 @@ selection-background-color: rgb(241, 240, 231);</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>40</y>
+       <y>80</y>
        <width>301</width>
        <height>81</height>
       </rect>
@@ -164,7 +164,7 @@ selection-background-color: rgb(241, 240, 231);</string>
      <property name="geometry">
       <rect>
        <x>340</x>
-       <y>40</y>
+       <y>90</y>
        <width>141</width>
        <height>31</height>
       </rect>
@@ -180,7 +180,7 @@ selection-background-color: rgb(241, 240, 231);</string>
      <property name="geometry">
       <rect>
        <x>340</x>
-       <y>90</y>
+       <y>130</y>
        <width>141</width>
        <height>31</height>
       </rect>
@@ -192,12 +192,84 @@ selection-background-color: rgb(241, 240, 231);</string>
       <string>Yorumu kaydet</string>
      </property>
     </widget>
+    <widget class="QListView" name="listView_4">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>30</y>
+       <width>301</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QListView" name="listView_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="c_jump">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>34</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="c_jump_label">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>191</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Atlanacak yorum sayısı: </string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="comment_jump">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Yorum atlama</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="aspam_box">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>230</y>
+      <y>270</y>
       <width>501</width>
       <height>111</height>
      </rect>
@@ -277,7 +349,7 @@ selection-background-color: rgb(241, 240, 231);</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">selection-color: rgb(201, 202, 255)</string>
      </property>
      <property name="editable">
       <bool>false</bool>
@@ -337,7 +409,7 @@ selection-background-color: rgb(241, 240, 231);</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>410</y>
+      <y>460</y>
       <width>501</width>
       <height>151</height>
      </rect>
@@ -426,7 +498,7 @@ selection-background-color: rgb(241, 240, 231);</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>350</y>
+      <y>390</y>
       <width>501</width>
       <height>61</height>
      </rect>

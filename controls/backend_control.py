@@ -98,12 +98,13 @@ class Worker(QObject):
     def stopBot(self, flag):
         self.flag = flag
 
-    def setData(self, san:int, sayfa:str, rcount:int,rchoise:int, yorum:str):
+    def setData(self, san:int, sayfa:str, rcount:int,rchoise:int, yorum:str, commentNo:int):
         self.san = san
         self.sayfa = sayfa
         self.rcount = rcount
         self.rchoise = rchoise
         self.yorum = yorum
+        self.commentNo = commentNo
 
 
     def runBot(self):      
@@ -140,7 +141,7 @@ class Worker(QObject):
             if(self.flag != True):
                 break
             try:
-                auto.getMedia(0)
+                auto.getMedia(self.commentNo)
             except (ClientNotFoundError, IndexError):
                 self.log.emit("\nSayfa bulunamadı")
             # Bura baxarsan
